@@ -8,6 +8,9 @@ public class ReaderFactory {
         if (filePath.endsWith(".csv")) {
             reader = new CSVReader();
         }
+        if (filePath.endsWith(".json")) {
+            reader = new JSONReader();
+        }
         return reader;
     }
 
