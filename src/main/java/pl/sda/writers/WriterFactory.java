@@ -1,6 +1,7 @@
 package pl.sda.writers;
 
 public class WriterFactory {
+
     SdaFileWriter produce(String filePath) {
         SdaFileWriter writer = null;
 
@@ -10,4 +11,5 @@ public class WriterFactory {
 
         return writer;
     }
+
 }
