@@ -2,7 +2,7 @@ package pl.sda.writers;
 
 public class WriterFactory {
 
-    SdaFileWriter produce(String filePath) {
+    public SdaFileWriter produce(String filePath) {
         SdaFileWriter writer = null;
 
         if (filePath.endsWith(".csv")) {

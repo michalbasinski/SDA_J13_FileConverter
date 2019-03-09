@@ -5,14 +5,19 @@ import pl.sda.readers.SdaFileReader;
 import pl.sda.writers.SdaFileWriter;
 import pl.sda.writers.WriterFactory;
 
+import java.util.List;
+import java.util.Map;
+
 public class FileConverter {
 
     public void convert(String sourcePath, String outputPath) {
 
-        ReaderFactory readerFactory;
-        SdaFileReader reader;
+        ReaderFactory readerFactory = new ReaderFactory();
+        SdaFileReader reader = readerFactory.produce(sourcePath);
+        List<Map<String, String>> records = reader.read(sourcePath);
 
-        WriterFactory writerFactory;
-        SdaFileWriter writer;
+        WriterFactory writerFactory = new WriterFactory();
+        SdaFileWriter writer = writerFactory.produce(outputPath);
+        writer.write(records, outputPath);
     }
 }
