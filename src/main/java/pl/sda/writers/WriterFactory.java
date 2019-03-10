@@ -8,6 +8,9 @@ public class WriterFactory {
         if (filePath.endsWith(".csv")) {
             writer = new CsvWriter();
         }
+        if (filePath.endsWith(".json")) {
+            writer = new JsonWriter();
+        }
 
         return writer;
     }

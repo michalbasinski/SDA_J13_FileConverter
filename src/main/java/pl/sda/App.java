@@ -7,8 +7,8 @@ public class App {
     public static void main(String[] args) {
         FileConverter fileConverter = new FileConverter();
 
-        String sourcePath = "/home/michal/SDA/Java13/Projekty/SDA_J13_FileConverter/src/main/resources/cards.json";
-        String outputPath = "/home/michal/convertedJson.csv";
+        String sourcePath = "/home/michal/custom.csv";
+        String outputPath = "/home/michal/convCustom.json";
         fileConverter.convert(sourcePath, outputPath);
     }
 }
