@@ -11,6 +11,9 @@ public class ReaderFactory {
         if (filePath.endsWith(".json")) {
             reader = new JSONReader();
         }
+        if (filePath.endsWith(".xlsx")) {
+            reader = new ExcelReader();
+        }
         return reader;
     }
 

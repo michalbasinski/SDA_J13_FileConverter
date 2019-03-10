@@ -7,8 +7,8 @@ public class App {
     public static void main(String[] args) {
         FileConverter fileConverter = new FileConverter();
 
-        String sourcePath = "/home/michal/custom.csv";
-        String outputPath = "/home/michal/convCustom.json";
+        String sourcePath = "/home/michal/myExcel.xlsx";
+        String outputPath = "/home/michal/fromExcel.json";
         fileConverter.convert(sourcePath, outputPath);
     }
 }
