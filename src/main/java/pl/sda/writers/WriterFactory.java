@@ -11,6 +11,9 @@ public class WriterFactory {
         if (filePath.endsWith(".json")) {
             writer = new JsonWriter();
         }
+        if (filePath.endsWith(".xlsx")) {
+            writer = new ExcelWriter();
+        }
 
         return writer;
     }
